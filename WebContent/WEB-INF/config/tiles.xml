@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+     <!-- Login tiles -->
+     <definition name="base"
+		template="/WEB-INF/view/login.jsp">
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+	<definition name="login" extends="base">
+		<put-attribute name="title" value="Hello Spring MVC" />
+	</definition>
+	 <definition name="registartion"
+		template="/WEB-INF/view/newCustomerRegistration.jsp">
+		<put-attribute name="body" value="/WEB-INF/view/newCustomerRegistration.jsp" />
+	</definition>
+	<definition name="newCustomerRegistration" extends="registartion">
+		<put-attribute name="title" value="Register Now" />
+	</definition>
+	<definition name="base.definition"
+		template="/WEB-INF/view/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value="/WEB-INF/view/home.jsp" />
+		<put-attribute name="body" value=""/>
+	</definition>
+	<definition name="hello" extends="base.definition">
+		<put-attribute name="title" value="welcome" />
+		<put-attribute name="body" value="/WEB-INF/view/hello.jsp" />
+	</definition>
+	<definition name="reports" extends="base.definition">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports.jsp" />
+	</definition>
+	<definition name="forms" extends="base.definition">
+		<put-attribute name="title" value="Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/forms.jsp" />
+	</definition>
+	<definition name="createOrder" extends="base.definition">
+		<put-attribute name="title" value="Create New Order" />
+		<put-attribute name="body" value="/WEB-INF/view/createOrder.jsp" />
+	</definition>
+	<definition name="addProduct" extends="base.definition">
+		<put-attribute name="title" value="Add New Product" />
+		<put-attribute name="body" value="/WEB-INF/view/addProduct.jsp" />
+	</definition>
+	<definition name="viewProducts" extends="base.definition">
+		<put-attribute name="title" value="All Products" />
+		<put-attribute name="body" value="/WEB-INF/view/viewProduct.jsp" />
+	</definition>
+</tiles-definitions>
